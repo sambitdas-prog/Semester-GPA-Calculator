@@ -1,21 +1,28 @@
-# CGPA Calculator
+# Semester CGPA Calculator 🎓
 
-A web-based CGPA (Cumulative Grade Point Average) calculator application.
+A dynamic, client-side web application designed to help university students calculate their semester GPAs and percentages accurately based on specific university grading rules (e.g., MAKAUT).
 
-## Features
-- Calculate your semester/cumulative GPA
-- User-friendly interface
-- Fast and accurate calculations
+**🔗 [Click here to use the Live Calculator](put-your-vercel-link-here)**
 
-## Files
-- `index.html` - Main HTML file
-- `script.js` - JavaScript logic
-- `style.css` - Styling
+## ✨ Features
+* **Dynamic University Logic:** Automatically calculates internal (CA) marks based on specific university guidelines (e.g., Best 2 out of 4).
+* **Responsive UI:** Fully optimized for Desktop, Tablet, and Mobile screens with a modern glassmorphism aesthetic.
+* **Theme Engine:** Integrated Dark Mode and Light Mode with smooth transitional animations.
+* **Formal PDF Export:** Bypasses the dark-mode UI to generate and download a clean, print-ready formal academic transcript using `html2pdf.js`.
+* **Backlog Detection:** Automatically flags subjects that fall below the minimum passing threshold.
 
-## How to Use
-1. Open `index.html` in your web browser
-2. Enter your grades and credits
-3. Click calculate to get your CGPA
+## 🛠️ Tech Stack
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript (No frameworks used)
+* **Libraries:** `html2pdf.js` (for PDF generation), `FontAwesome` (for UI icons)
+* **Deployment:** Vercel / GitHub Pages
 
-## License
-MIT
+## 👨‍💻 Developer
+Designed and programmed by **Sambit Das**
+
+## ⚠️ Copyright & License
+**© 2026 | Sambit Das Prods. | All Rights Reserved.**
+
+## ⚠️ Warning
+This is a proprietary portfolio project. The source code is hosted publicly for demonstration purposes only. 
+You may not copy, distribute, modify, or use this code for your own personal or commercial projects without
+explicit permission from the creator.
