@@ -1,4 +1,4 @@
-# Semester CGPA Calculator 🎓
+# Semester GPA Calculator 🎓
 
 A dynamic, client-side web application designed to help university students calculate their semester GPAs and percentages accurately based on specific university grading rules (e.g., MAKAUT).
 
@@ -23,6 +23,6 @@ Designed and programmed by **Sambit Das**
 **© 2026 | Sambit Das Prods. | All Rights Reserved.**
 
 ## ⚠️ Warning
-This is a proprietary portfolio project. The source code is hosted publicly for demonstration purposes only. 
+This is a proprietary prototype project. The source code is hosted publicly for demonstration purposes only. 
 You may not copy, distribute, modify, or use this code for your own personal or commercial projects without
 explicit permission from the creator.
