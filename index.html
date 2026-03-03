@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calc : The Semester GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    
+    <div class="global-header">
+        <button id="home-btn" class="home-btn hidden" onclick="goHome()" title="Back to Home">
+            <i class="fas fa-home"></i>
+        </button>
+        
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <span id="theme-label">Dark Mode</span>
+        </div>
+    </div>
+
+    <div id="front-page" class="container active-page">
+        <h1>Welcome to GPA Calc</h1>
+        <div class="input-group">
+            <label>Student Name</label>
+            <input type="text" id="student-name" placeholder="Enter your name">
+        </div>
+        <div class="input-group">
+            <label>Department / Stream</label>
+            <input type="text" id="student-stream" placeholder="e.g., B.Tech CSE / ECE / IT, B.Sc Physics">
+        </div>
+        <div class="input-group">
+            <label>Semester</label>
+            <input type="number" id="student-sem" placeholder="e.g., 1">
+        </div>
+        <div class="btn-center">
+            <button class="btn-primary" onclick="goToCalculator()">Execute</button>
+        </div>
+    </div>
+
+    <div id="calculator-page" class="container hidden-page">
+        <h2>Semester Parameters</h2>
+        
+        <div class="config-panel">
+            <div class="input-group">
+                <label>Select University</label>
+                <select id="university-select" onchange="generateTable()">
+                    <option value="none">-- Select University --</option>
+                    <option value="MAKAUT">MAKAUT</option>
+                    <option value="CU">Calcutta University</option>
+                    <option value="JU">Jadavpur University</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label>Number of Subjects for This Semester</label>
+                <input type="number" id="subject-count" min="1" max="12" onchange="generateTable()">
+            </div>
+        </div>
+
+        <div id="table-container" class="table-container">
+            </div>
+
+        <div class="btn-center">
+            <button class="btn-primary hidden" id="calculate-btn" onclick="calculateResults()">Get Results</button>
+        </div>
+    </div>
+
+    <div id="results-modal" class="modal hidden">
+        <div class="modal-content" id="export-content">
+            <h2 id="result-title">Your Semester Results</h2>
+            <p id="result-student-info"></p>
+            <div id="result-stats"></div>
+            <div id="backlog-warning" class="warning hidden"></div>
+            
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="closeModal()">Close</button>
+                <button class="btn-primary" onclick="exportToPDF()">Export as PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="print-template">
+        <div class="print-header">
+            <p><strong>Student Name:</strong> <span id="print-name"></span></p>
+            <p><strong>Stream / Dept:</strong> <span id="print-stream"></span></p>
+            <p><strong>Semester:</strong> <span id="print-sem"></span></p>
+        </div>
+        <table class="print-table" id="print-table">
+            </table>
+        <div class="print-summary">
+            <p><strong>Total GPA:</strong> <span id="print-gpa"></span></p>
+            <p><strong>Percentage:</strong> <span id="print-percentage"></span></p>
+        </div>
+        <div class="print-footer">
+            <p>Designed and Programmed by Sambit Das.</p>
+            <p>A Sambit Das Prods. | © 2026 | Netaji Subhash Engineering College<br>All Rights Reserved</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/sambitdas244/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/somebitsss/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/sambitdas-prog" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Designed and Programmed by Sambit Das.</p>
+        <p>A Sambit Das Prods. | © 2026 | Netaji Subhash Engineering College<br>All Rights Reserved</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/sambitdas244/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/somebitsss/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/sambitdas-prog" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
