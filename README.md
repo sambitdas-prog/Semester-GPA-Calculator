@@ -2,7 +2,7 @@
 
 A dynamic, client-side web application designed to help university students calculate their semester GPAs and percentages accurately based on specific university grading rules (e.g., MAKAUT).
 
-**🔗 [Click here to use the Live Calculator](put-your-vercel-link-here)**
+**🔗 [Check 'GPA Calc' by clicking here](https://semester-gpa-calculator.vercel.app/)**
 
 ## ✨ Features
 * **Dynamic University Logic:** Automatically calculates internal (CA) marks based on specific university guidelines (e.g., Best 2 out of 4).
@@ -14,7 +14,7 @@ A dynamic, client-side web application designed to help university students calc
 ## 🛠️ Tech Stack
 * **Frontend:** HTML5, CSS3, Vanilla JavaScript (No frameworks used)
 * **Libraries:** `html2pdf.js` (for PDF generation), `FontAwesome` (for UI icons)
-* **Deployment:** Vercel / GitHub Pages
+* **Deployment:** Vercel
 
 ## 👨‍💻 Developer
 Designed and programmed by **Sambit Das**
